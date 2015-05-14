@@ -1,0 +1,21 @@
+name: ReportIssue
+api: 1.0.0
+main: ReportIssue\Main
+version: 1.0.0
+commands:
+  report:
+    usage: /report
+    description: Tells the console that there is a problem
+    permission: reportissue.command.report
+permissions:
+  reportissue:
+    default: false
+    description: Allows the player to use all of the functions in ReportIssue
+    children:
+      reportissue.command:
+        default: false
+        description: Allows the player to run all of the ReportIssue commands
+        children:
+          reportissue.command.report:
+            default: true
+            description: Allows the player to run the Report command
