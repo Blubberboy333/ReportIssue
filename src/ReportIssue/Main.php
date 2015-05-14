@@ -23,6 +23,7 @@ class Main extends PluginBase{
           $name = $sender->getDisplayName();
           $sender->sendMessage("[ReportIssue] Your issue has been reported");
           $this->getLogger()->info(TextFormat::RED .$name. " has reported an issue!!!");
+          $this->getServer()->broadcastMessage("[ReportIssue] " .$name. " needs help!");
         }else{
           $sender->sendMessage("You don't have permission to do that!");
         }
