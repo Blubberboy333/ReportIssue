@@ -20,7 +20,7 @@ class Main extends PluginBase{
   public function onCommand(CommandSender $sender, Command $command, $label, array $args){
     if(strtolower($command->getName()) === "report"){
       if($sender->hasPermission("reportissue") || $sender->hasPermission("reportissue.command") || $sender->hasPermission("reportissue.command.report")){
-        $player = $sender->getDisplayName();
+        $player = $sender->getPlayer()->getDisplayName();
         $this->getLogger()->info(TextFormat::YELLOW . "[ReportIssue] " .$player. " needs help!");
         $this->getServer()->broadcastMessage("[ReportIssue] " .$player. " needs help!");
       }else{
